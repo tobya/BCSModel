@@ -14,9 +14,7 @@
             "email": "toby@cookingisfun.ie"
         }
     ],
-    "require": {
-        "laravel/laravel": "^8.0|^9.0"
-    },
+
 "extra": {
     "laravel": {
         "providers": [
