@@ -2,10 +2,10 @@
     "name": "tobya/bcsmodel",
     "description": "Basic Model and Traits for BCS MSSQL Models",
     "type": "package",
-    "license": "mit",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Tobya\\Bcsmodel\\": "src/"
+            "BCS\\Model\\": "src/"
         }
     },
     "authors": [
@@ -14,5 +14,15 @@
             "email": "toby@cookingisfun.ie"
         }
     ],
-    "require": {}
+    "require": {
+        "laravel/laravel": "^8.0|^9.0"
+    },
+"extra": {
+    "laravel": {
+        "providers": [
+            "BCS\\Model\\Providers\\BCSModelServiceProvider"
+        ]
+
+    }
+}
 }
