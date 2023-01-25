@@ -2,7 +2,8 @@
 
   namespace BCS\Model\Providers;
 
-  use App\Console\Commands\CheckSQLGrammerDate;
+  
+  use BCS\Model\Console\CheckSQLGrammerDate;
 
   class BCSModelServiceProvider extends \Illuminate\Support\ServiceProvider
   {

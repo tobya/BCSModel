@@ -1,6 +1,7 @@
 <?php
 
-namespace App\Console\Commands;
+namespace BCS\Model\Console;
+
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
