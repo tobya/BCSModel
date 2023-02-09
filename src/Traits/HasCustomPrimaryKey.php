@@ -4,6 +4,7 @@
 
   trait HasCustomPrimaryKey
   {
+
     /**
      * Since models from the older BCS tables don't use id as their id field,
      * bugs can be introduced when ->id is used accidentally.
