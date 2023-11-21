@@ -11,7 +11,10 @@ use Illuminate\Support\Str;
  * and is not universal and incorrect interprets it as Y-d-m which is beyond idiotic.
  * Laravel uses Y-m-d as their international format.  This command checks the vendor directory for the file and updates
  * it if required.  A patch could be submitted to the illuminate project to allow the end user of Illuminate to change this.
- * Class CheckSQLGrammerDate
+ */
+
+ /**
+  * Class CheckSQLGrammerDate
  * @package App\Console\Commands
  */
 class CheckSQLGrammerDate extends Command
@@ -56,9 +59,14 @@ class CheckSQLGrammerDate extends Command
                     $UpdatedFile_txt = $file_txt->replace($datestr, 'return \'Ymd H:i:s.v\';');
                     file_put_contents($filetocheck,$UpdatedFile_txt);
                     $this->comment("
-Incorrect Date Format value found in file SqlServerGrammar.php
-on disk: $filetocheck");
-                    $this->info('Updated');
+**********************************                    
+Incorrect Date Format value found
+********************************** 
+File on disk: $filetocheck");
+                    $this->info('
+------------------
+Updated
+------------------');
                     return 0;
                 } else {
                     $this->warn( $this->NoUpdateMessage($filetocheck));
